@@ -45,11 +45,6 @@ export default class ModalGioHang extends Component {
         });
     };
     renderTotalSanPham = () => {
-        // let total = 0;
-        // this.props.dataGioHang.map((item) => {
-        //     total += item.soLuong;
-        // });
-        // return total;
         return this.props.dataGioHang.reduce((a, b) => {
             return a + b.soLuong;
         }, 0);
@@ -88,6 +83,7 @@ export default class ModalGioHang extends Component {
                                     <th className="text-center">Hình Ảnh</th>
                                     <th className="text-center">Đơn Giá</th>
                                     <th className="text-center">Số Lượng</th>
+                                    <th className="text-center">Thành Tiền</th>
                                 </tr>
                             </thead>
                             <tbody>{this.renderDanhSachGioHang()}</tbody>
