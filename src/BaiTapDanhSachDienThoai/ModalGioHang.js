@@ -8,6 +8,7 @@ export default class ModalGioHang extends Component {
     setVisible = (param) => {
         this.setState({ isOpen: param });
     };
+
     renderDanhSachGioHang = () => {
         let { handleThayDoiSoLuong } = this.props;
         return this.props.dataGioHang.map((item) => {
@@ -39,6 +40,9 @@ export default class ModalGioHang extends Component {
                             className="btn btn-success text-center">
                             +
                         </button>
+                    </td>
+                    <td className="text-center">
+                        {item.giaBan * item.soLuong}
                     </td>
                 </tr>
             );
@@ -78,7 +82,7 @@ export default class ModalGioHang extends Component {
                                 <tr>
                                     <th className="text-center">Mã Sản Phẩm</th>
                                     <th className="text-center">
-                                        Ten Sản Phẩm
+                                        Tên Sản Phẩm
                                     </th>
                                     <th className="text-center">Hình Ảnh</th>
                                     <th className="text-center">Đơn Giá</th>
